@@ -1,0 +1,37 @@
+<h1>Update Department</h1>
+
+<%= form_for(:dept, :url => {:action => 'update', :id => @dept.id}) do |f| %>
+<table>  
+   <tr>
+       <td>Department Name</td>
+       <td><%= f.text_field :dept_name%></td>
+   </tr>
+    
+   <tr>   
+       <td>Department Description</td>
+       <td><%= f.text_field :dept_descr%></td>
+   </tr>
+
+   <tr>
+       <td>Position</td>
+       <td><%= f.text_field :position%></td>
+   </tr>
+
+   <tr>
+       <td>Visible</td>
+       <td><%= f.text_field :visible%></td>
+   </tr> 
+
+	<tr>
+       <td colspan="2">&nbsp;</td> 
+   </tr>
+   <tr> 
+       <td colspan="2" align="center"><%= submit_tag "Update Dept"%></td>
+   </tr>
+</table>
+<% end %>
+
+</br>
+<div>
+<%= link_to("<< Back", {action: 'index'}) %>
+</div>

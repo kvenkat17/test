@@ -1,0 +1,26 @@
+<h1>Department List</h1>
+<%= link_to("Add New Department", {action: 'new'}) %>
+</br></br>
+
+<table>
+   <tr>
+       <th>Department Name</th>
+       <th>Department Description</th>
+       <th>Position</th>
+       <th>Visible</th> 
+       <th> </th>
+   </tr>
+  <% @depts.each do |t|%>
+   <tr>
+       <td><%= t.dept_name%></td>
+       <td><%= t.dept_descr%></td>
+       <td id ="center"><%= t.position%></td>
+       <td><%= t.visible%></td> 
+       <td>
+       	<%= link_to("show",{action: 'show', id: t.id}) %>
+       	<%= link_to("edit",{action: 'edit', id: t.id}) %>
+       	<%= link_to("destroy",{action: 'destroy', id: t.id}) %>
+       </td>
+   </tr>
+   <% end%>
+</table>

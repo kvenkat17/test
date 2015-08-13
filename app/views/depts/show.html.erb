@@ -1,0 +1,42 @@
+<h1>Department <%=@dept.dept_name.capitalize %></h1>
+
+<table>
+   <tr>
+       <td>Department ID</td>
+       <td><%= @dept.id%></td>
+   </tr>
+    
+   <tr>
+       <td>Department Name</td>
+       <td><%= @dept.dept_name%></td>
+   </tr>
+    
+   <tr>   
+       <td>Department Description</td>
+       <td><%= @dept.dept_descr%></td>
+   </tr>
+
+   <tr>
+       <td>Position</td>
+       <td><%= @dept.position%></td>
+   </tr>
+
+   <tr>
+       <td>Visible</td>
+       <td><%= @dept.visible%></td>
+   </tr>
+
+   <tr>
+       <td>Added Date</td>
+       <td><%= @dept.created_at%></td>
+   </tr>
+
+       <td>Updated Date</td>
+       <td><%= @dept.updated_at%></td> 
+   </tr> 
+</table>
+</br>
+<div>
+<%= link_to("<< Back", {action: 'index'}) %>
+<%= link_to("Edit", {action: 'edit', id: @dept.id}) %>
+</div>

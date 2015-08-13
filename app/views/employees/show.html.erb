@@ -1,0 +1,57 @@
+<h1>Employee <%=@employee.emp_name.capitalize %></h1>
+
+<table>
+   <tr>
+       <td>Employee ID</td>
+       <td><%= @employee.id%></td>
+   </tr>
+    
+   <tr>
+       <td>Employee Name</td>
+       <td><%= @employee.emp_name%></td>
+   </tr>
+    
+   <tr>   
+       <td>Address</td>
+       <td><%= @employee.address%></td>
+   </tr>
+
+   <tr>
+       <td>City</td>
+       <td><%= @employee.city%></td>
+   </tr>
+
+   <tr>
+       <td>State</td>
+       <td><%= @employee.state%></td>
+   </tr>
+    
+   <tr>   
+       <td>Age</td>
+       <td><%= @employee.age%></td>
+   </tr>
+
+   <tr>
+       <td>Sex</td>
+       <td><%= @employee.sex%></td>
+   </tr>
+
+   <tr>
+       <td>Visible</td>
+       <td><%= @employee.visible%></td>
+   </tr>
+
+   <tr>
+       <td>Added Date</td>
+       <td><%= @employee.created_at%></td>
+   </tr>
+
+       <td>Updated Date</td>
+       <td><%= @employee.updated_at%></td> 
+   </tr> 
+</table>
+</br>
+<div>
+<%= link_to("<< Back", {action: 'index'}) %>
+<%= link_to("Edit", {action: 'edit', id: @employee.id}) %>
+</div>

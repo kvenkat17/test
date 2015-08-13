@@ -1,0 +1,52 @@
+<h1>Update New Employee</h1>
+
+<%= form_for(:employee, :url => {:action => 'update', :id => params[:id]}) do |f| %>
+<table>  
+   <tr>
+       <td>Employee Name</td>
+       <td><%= f.text_field :emp_name%></td>
+   </tr>
+    
+   <tr>   
+       <td>Address</td>
+       <td><%= f.text_field :address%></td>
+   </tr>
+
+   <tr>
+       <td>City</td>
+       <td><%= f.text_field :city%></td>
+   </tr> 
+
+   <tr>
+       <td>State</td>
+       <td><%= f.text_field :state%></td>
+   </tr>
+    
+   <tr>   
+       <td>Age</td>
+       <td><%= f.text_field :age%></td>
+   </tr>
+
+   <tr>
+       <td>Sex</td>
+       <td><%= f.text_field :sex%></td>
+   </tr>
+
+   <tr>
+       <td>Visible</td>
+       <td><%= f.text_field :visible%></td>
+   </tr> 
+
+	<tr>
+       <td colspan="2">&nbsp;</td> 
+   </tr>
+   <tr> 
+       <td colspan="2" align="center"><%= submit_tag "Update Employee"%></td>
+   </tr>
+</table>
+<% end %>
+
+</br>
+<div>
+<%= link_to("<< Back", {action: 'index'}) %>
+</div>

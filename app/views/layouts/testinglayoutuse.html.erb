@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Demo Organization</title>
+  
+</head>
+<h1> Simple Organization </h1>
+<body>
+
+	<% if !flash[:notice].blank? %>
+	<%= flash[:notice]%>
+	<% end %>
+	
+<%= yield %>
+
+</body>
+</html>

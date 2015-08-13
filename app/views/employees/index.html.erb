@@ -1,0 +1,32 @@
+<h1>Department List</h1>
+<%= link_to("Add New Employee", {action: 'new'}) %>
+</br></br>
+
+<table>
+   <tr>
+       <th>Employee Name</th>
+       <th>Address</th>
+       <th>City</th>
+       <th>State</th> 
+       <th>Age</th>
+       <th>Sex</th>
+       <th>Visible</th> 
+       <th> </th>
+   </tr>
+  <% @employees.each do |t|%>
+   <tr>
+       <td><%= t.emp_name%></td>
+       <td><%= t.address%></td>
+       <td><%= t.city%></td>
+       <td><%= t.state%></td> 
+       <td><%= t.age%></td>
+       <td><%= t.sex%></td>
+       <td><%= t.visible%></td> 
+       <td>
+       	<%= link_to("show",{action: 'show', id: t.id}) %>
+       	<%= link_to("edit",{action: 'edit', id: t.id}) %>
+       	<%= link_to("destroy",{action: 'destroy', id: t.id}) %>
+       </td>
+   </tr>
+   <% end%>
+</table>
